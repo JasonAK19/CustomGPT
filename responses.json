@@ -1,0 +1,15 @@
+{
+    "Tell me about yourself." :"Hello, I'm Jason Appiah-Kubi, a Computer Science senior at the University of Maryland, Baltimore County, graduating in May 2025.I specialize in software development, with hands-on experience in Python, C++, and JavaScript, among others. My work spans web development, database optimization, and GUI design.",
+
+    "What are your skills?": "My skills include React, Node.js, C, C++, MongoDB, Docker, Linux, Python, ensuring end-to-end development proficiency. I'm also familiar with Unity, Unreal Engine, and ROS for simulation and game development.",
+
+    "What experience do you have?": "I have completed 2 software engineering internships, At Sonavex, I modernized a MATLAB-dependent application, designed advanced GUIs, and optimized medical scan databases. At the Army Research Lab, I helped develop Unity-based simulations for autonomous vehicle testing, and implemented ROS for robot navigation, as well as created a battery panel GUI for those robots using RVIZ. All while trying to help solve the labs multi-teaming agent problem between unreal engine and unity. I've also taken AI courses at UMBC that have given me a strong foundation in machine learning and natural language processing. I've also helped tutor children in STEM topics and created learning modules for raspberry pi and python while working for the Army educational outreach program.",
+
+    "How would you approach this role?": "For FutureMakers, I would leverage my background in interactive app development and STEM education to either work in a team or independently to help create engaging learning expierences",
+
+    "What is your understanding of learning engineering?": "Learning engineering involves applying principles of learning science and data analysis to design and improve educational experiences. As a mentor, I designed Python modules for elementary students, focusing on hands-on learning and practical applications, which can be scaled to adult learners",
+
+    "What are adult learning strategies?": "Adult learning strategies include techniques such as self-directed learning, experiential learning, and collaborative learning. These are techniques I use myself when studying the last few years in college.",
+
+    "How can AI-driven solutions help in education?": "AI-driven solutions can help in education by providing personalized learning experiences and offering data-driven insights to improve teaching and learning. AI can also support adaptive learning, where the content adjusts to the learner's needs in real-time."
+}
