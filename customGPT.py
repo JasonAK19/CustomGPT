@@ -21,17 +21,31 @@ def query(user_input):
     if closest_match:
         return predefined_responses[closest_match[0]]
     
-    prompt = f"""Context: You are an AI assistant representing Jason Appiah-Kubi He is a college student at University of Maryland Baltimore County. 
+    prompt = f"""Context: You are an AI assistant representing Jason Appiah-Kubi. He is a college student at the University of Maryland Baltimore County. 
     User query: {user_input} Provide a professional and relevant answer based on Jason's background in computer science and education."""
-    
+    if user_input.lower() in ["help", "hello", "hi", "what can you do?"]:
+        return (
+            "Hi! I'm here to answer questions about Jason Appiah-Kubi, his skills, experience, "
+            "and how he would approach a role. You can ask things like:\n"
+            "- Tell me about yourself.\n"
+            "- What are your skills?\n"
+            "- How would you approach this role?"
+        )
     try:
         payload = {"inputs": prompt, "parameters": {"max_length": 150}}
         response = requests.post(API_URL, headers=headers, json=payload)
         response.raise_for_status()
         return response.json()[0]["generated_text"]
-    except Exception as e:
-        return f"I apologize, but I'm having trouble generating a response. Please try rephrasing your question. Error: {str(e)}"
     
+    except requests.exceptions.RequestException:
+        return "It seems there's an issue with processing your request. Please try again later."
+    except KeyError:
+        return "I'm sorry, but I couldn't understand the response from the server. Please try rephrasing your question."
+    except Exception as e:
+        return (
+            "I'm sorry, something went wrong. You can try rephrasing your query or use one of the examples provided. "
+        )
+
 iface = gr.Interface(
     fn=query,
     inputs="text",
