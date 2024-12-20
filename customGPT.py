@@ -1,8 +1,11 @@
 import gradio as gr
 import requests
+from dotenv import load_dotenv
+import os
 
+load_dotenv()
+API_TOKEN = os.getenv("HUGGINGFACE_API_TOKEN")
 API_URL = "https://api-inference.huggingface.co/models/EleutherAI/gpt-j-6B"
-API_TOKEN = "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"
 headers = {"Authorization": f"Bearer {API_TOKEN}"}
 
 
